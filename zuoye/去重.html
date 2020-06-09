@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function quchong(arr){
+            var newarr = [];
+            for(var i = 0; i < arr.length; i++){
+                if(newarr.indexOf(arr[i]) == -1){
+                    newarr.push(arr[i]);
+                }
+            }
+            return newarr;
+        }
+        var arr = quchong(['g','h','s','w','s','d','g','h','a','b','b']);
+        alert('去重前：g h s w s d g h a b b');
+        alert('去重后:'+arr);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

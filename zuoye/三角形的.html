@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hang = prompt('输入大于 0 小于 100 的正整数');
+        var str = '';
+        if(hang > 0 && hang < 100){
+            for(i = 1; i <= hang; i++){
+                for(j = i; j <= hang; j++){
+                    str += '*';
+                }
+                str += '\n';
+            }
+            console.log(str);
+            
+        }else{
+            alert('请输入大于 0 小于 100 的正整数');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

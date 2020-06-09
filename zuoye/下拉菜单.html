@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #diyi{
+            width: 400px;
+            margin: 100px auto;
+        }
+        /* .diyi>li>a:hover{
+            background-color: white;
+        }
+        .diyi ul{
+            display: none;
+            position: absolute;
+            top: 41px;
+            left: 0;
+            width: 100%;
+            border-left: 1px solid yellow;
+            border-right: 1px solid yellow;
+        } */
+        #diyi ul li{
+            float: left;
+            width:100px;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+        }
+        #diyi a{
+            text-decoration:none;
+            color:white;
+            display:block;
+            width:100px;
+            height:30px;
+            background:black;
+        }
+       
+        #diyi ul ul{
+            display: none;
+        }
+        #diyi ul li a:hover{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="diyi">
+        <ul>
+            <li id="li01">
+                <a href="#">Home</a>
+                <ul id="ul01">
+                    <li>
+                        <a href="">1</a>
+                    </li>
+                    <li>
+                        <a href="">2</a>
+                    </li>
+                    <li>
+                        <a href="">3</a>
+                    </li>
+                </ul>
+            </li>
+            <li id="li02">
+                <a href="#">Help</a>
+                <ul id="ul02">
+                    <li>
+                        <a href="">1</a>
+                    </li>
+                    <li>
+                        <a href="">2</a>
+                    </li>
+                    <li>
+                        <a href="">3</a>
+                    </li>
+                </ul>
+            </li>
+            <li id="li03">
+                <a href="#">Dropdown</a>
+                <ul id="ul03">
+                    <li>
+                        <a href="">Action</a>
+                    </li>
+                    <li>
+                        <a href="">Another action</a>
+                    </li>
+                    <li>
+                        <a href="">Something else</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+          function xiala(li,ul){
+      var li = document.getElementById(li);
+      var ul = document.getElementById(ul);
+      li.onmouseover = function(){
+        ul.style.display = 'block';
+      }
+      li.onmouseout = function(){
+         ul.style.display = 'none';
+     }
+  }
+  xiala('li01','ul01');
+  xiala('li02','ul02');
+  xiala('li03','ul03');
+    </script>
+</body>
+</html>

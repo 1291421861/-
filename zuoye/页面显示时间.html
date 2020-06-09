@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="time"></div>
+    <script>
+        window.onload=function(){
+            setInterval(function(){
+            fnDate();
+            },1000);
+        }
+        function fnDate(){
+            var oDiv=document.getElementById("time");
+            var date=new Date();
+            var year=date.getFullYear();//当前年份
+            var month=date.getMonth();//当前月份
+            var d=date.getDate();//天
+            d = d < 10 ? '0' + d : d;
+            var h=date.getHours();//时
+            h = h < 10 ? '0' + h : h;
+            var m=date.getMinutes();//分
+            m = m < 10 ? '0' + m : m;
+            var s=date.getSeconds();//秒
+            s = s < 10 ? '0' + s : s;
+            var showTime = year + "年" + (month+1)+ "月" + d + "日" + h + "时" + m + "分"  + s + "秒"; 
+           document.getElementById('time').innerText = showTime;           
+        }
+        
+    </script>
+</body>
+</html>

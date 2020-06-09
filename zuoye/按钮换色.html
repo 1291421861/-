@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id=btn>换色</button>
+    <script>
+        var btn = document.getElementById('btn');
+        var color=['green','blue','red','yellow'];
+        var i = 0;
+        btn.onclick = function(){
+            btn.style.backgroundColor = color[i];
+            document.body.style.backgroundColor = color[i];
+            i++;
+        }
+    </script>
+</body>
+</html>
